@@ -13,6 +13,8 @@ The app has the following key features:
 
 ## Supporting Documents
 
+All documentation is hosted om [Github Pages](https://waimea-obrownrigg.github.io/level-3-project-progress-tracker/)
+
 Task Instructions:
 - [Instruction documents](docs/instructions/)
 
