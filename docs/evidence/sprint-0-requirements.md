@@ -2,88 +2,89 @@
 
 ## Identified Problem or Need
 
-Replace this text with a clearly stated problem or need that exists that your project will attempt to solve / fulfil.
+A way for custumers of an engineering business to check the progress of their jobs.
 
 
 ## End-User Requirements
 
-Replace this text with a description of your typical end-users and their specific needs / expectations / requirements.
+end users:
+Customers: An easy way to check on the progress of their jobs without having to call the business directly
 
 
 ## Proposed Solution
 
-Replace this text with a brief statement about the system that you intend to create, including the key functionality it should have.
+A website where employees can log progress on jobs. 
 
 
 # Relevant Implications
 
-## NAME OF IMPLICATION 1
+## FUTURE PROOFING
 
-Replace this text with a clear explanation of what the implication means.
-
-### Relevance to the System
-
-Replace this text with an explanation of why the implication is relevant to this particular project.
-
-### Impact / Considerations
-
-Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication.
-
-
-
-## NAME OF IMPLICATION 2
-
-Replace this text with a clear explanation of what the implication means.
+Future proofing is about making sure that your system can be used for as long as possible by making it easy to update and expand.
 
 ### Relevance to the System
 
-Replace this text with an explanation of why the implication is relevant to this particular project.
+Since my website requires frequent updates to fulfill it's purpose, this implication will be important to consider.
 
 ### Impact / Considerations
 
-Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication.
+Employees will need to regularly log progress, so it will need to be easy to do that, it should also be easy to change the aesthetics of the site, incase of rebranding.
 
 
 
-## NAME OF IMPLICATION 3
+## PRIVACY
 
-Replace this text with a clear explanation of what the implication means.
+Privacy is about making sure that any personal or important information remains secure from prying eyes.
 
 ### Relevance to the System
 
-Replace this text with an explanation of why the implication is relevant to this particular project.
+My system may be required to store important information about acounts and the business itself.
 
 ### Impact / Considerations
 
-Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication.
+I should make sure that important information is only accesible to those who need it.
 
 
 
-## NAME OF IMPLICATION 4
+## AESTHETICS
 
-Replace this text with a clear explanation of what the implication means.
+Aesthetics as an implication means that your system should look good, but also be relevant and not over the top.
 
 ### Relevance to the System
 
-Replace this text with an explanation of why the implication is relevant to this particular project.
+Since the website is representing the business, it should put forward a good image for customers.
 
 ### Impact / Considerations
 
-Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication.
+My website should go for a proffesional style, that clearly communicates information.
 
 
 
-## NAME OF IMPLICATION 5
+## FUNCTIONALITY
 
-Replace this text with a clear explanation of what the implication means.
+Functionality means that your system should always work under different circumstances.
 
 ### Relevance to the System
 
-Replace this text with an explanation of why the implication is relevant to this particular project.
+Since it should be counvinient to use my website, it should work quickly and on all devices.
 
 ### Impact / Considerations
 
-Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication.
+I will need to make sure that the website runs smoothly and efficiently under all circumstances.
+
+
+
+## USABILITY
+
+Usability is all about making the act of actually using the system as simple and smooth as possible.
+
+### Relevance to the System
+
+My website needs to be quick to use and easy to understand so that anyone can use it anytime, it should also be easy for employees to notice and correct mistakes.
+
+### Impact / Considerations
+
+Everything should be clearly labeled and easy to access.
 
 
 
