@@ -90,22 +90,22 @@ Everything should be clearly labeled and easy to access.
 
 # User Experience (UX) Principles
 
-## NAME OF UX PRINCIPLE 1
+## Clear User Flows
 
-Replace this text with a clear explanation of what the principle means.
+This principle is about making sure that tasks require as few actions to complete as possible, with minimal, if not zero dead ends.
 
 ### Relevance to the System
 
-Replace this text with an explanation of why the principle is relevant to this particular project.
+The entire purpose of my website is to make one task as convenient as possible, so keeping actions to a mininimum fit right in goal.
 
 ### Impact / Considerations
 
-Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this principle.
+I need to make sure that every page can be travvelled to easily and that all of them have easy exit options.
 
 
-## NAME OF UX PRINCIPLE 2
+## Consistent and Clear
 
-Replace this text with a clear explanation of what the principle means.
+This principle is all about consistency and clarity, making suree that pages have similar layouts that are easy to understand.
 
 ### Relevance to the System
 
