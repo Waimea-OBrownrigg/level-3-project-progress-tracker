@@ -16,7 +16,9 @@ Customers: An easy way to check on the progress of their jobs without having to 
 A website where employees can log progress on jobs. 
 
 
+
 # Relevant Implications
+
 
 ## FUTURE PROOFING
 
@@ -24,12 +26,11 @@ Future proofing is about making sure that your system can be used for as long as
 
 ### Relevance to the System
 
-Since my website requires frequent updates to fulfill it's purpose, this implication will be important to consider.
+My website will need to be frequently updated by employees, for example, progress on jobs needs to be logged, new jobs must be added, and completed ones removed so that the information remains up to date. There is also the possibility that the company rebrands, which would require updating the visuals on the website.
 
 ### Impact / Considerations
 
-Employees will need to regularly log progress, so it will need to be easy to do that, it should also be easy to change the aesthetics of the site, incase of rebranding.
-
+placeholder
 
 
 ## PRIVACY
@@ -45,7 +46,6 @@ My system may be required to store important information about acounts and the b
 I should make sure that important information is only accesible to those who need it.
 
 
-
 ## AESTHETICS
 
 Aesthetics as an implication means that your system should look good, but also be relevant and not over the top.
@@ -59,7 +59,6 @@ Since the website is representing the business, it should put forward a good ima
 My website should go for a proffesional style, that clearly communicates information.
 
 
-
 ## FUNCTIONALITY
 
 Functionality means that your system should always work under different circumstances.
@@ -71,7 +70,6 @@ Since it should be counvinient to use my website, it should work quickly and on 
 ### Impact / Considerations
 
 I will need to make sure that the website runs smoothly and efficiently under all circumstances.
-
 
 
 ## USABILITY
@@ -90,22 +88,23 @@ Everything should be clearly labeled and easy to access.
 
 # User Experience (UX) Principles
 
-## Clear User Flows
 
-This principle is about making sure that tasks require as few actions to complete as possible, with minimal, if not zero dead ends.
+## NAME OF UX PRINCIPLE 1
+
+Replace this text with a clear explanation of what the principle means.
 
 ### Relevance to the System
 
-The entire purpose of my website is to make one task as convenient as possible, so keeping actions to a mininimum fit right in goal.
+Replace this text with an explanation of why the principle is relevant to this particular project.
 
 ### Impact / Considerations
 
-I need to make sure that every page can be travvelled to easily and that all of them have easy exit options.
+Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this principle.
 
 
-## Consistent and Clear
+## NAME OF UX PRINCIPLE 2
 
-This principle is all about consistency and clarity, making suree that pages have similar layouts that are easy to understand.
+Replace this text with a clear explanation of what the principle means.
 
 ### Relevance to the System
 
@@ -127,4 +126,3 @@ Replace this text with an explanation of why the principle is relevant to this p
 ### Impact / Considerations
 
 Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this principle.
-
