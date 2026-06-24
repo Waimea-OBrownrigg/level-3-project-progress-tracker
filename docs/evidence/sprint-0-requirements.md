@@ -30,7 +30,7 @@ My website will need to be frequently updated by employees, for example, progres
 
 ### Impact / Considerations
 
-placeholder
+I will include an edit function that allows easy updating of jobs, and will build the visuals of the website in a way that allows colours and logos to be changed easily.
 
 
 ## PRIVACY
@@ -39,11 +39,11 @@ Privacy is about making sure that any personal or important information remains 
 
 ### Relevance to the System
 
-My system may be required to store important information about acounts and the business itself.
+Users should only be able to see their own jobs, while employees should be able to see all jobs.
 
 ### Impact / Considerations
 
-I should make sure that important information is only accesible to those who need it.
+I need to include a function that checks what account the user is using and only displays the job  
 
 
 ## AESTHETICS
