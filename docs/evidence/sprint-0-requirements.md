@@ -43,7 +43,7 @@ Users should only be able to see their own jobs, while employees should be able 
 
 ### Impact / Considerations
 
-I need to include a function that checks what account the user is using and only displays the job  
+I need to include a function that checks what account the user is using and only displays the jobs relating to that account.
 
 
 ## AESTHETICS
@@ -56,7 +56,7 @@ Since the website is representing the business, it should put forward a good ima
 
 ### Impact / Considerations
 
-My website should go for a proffesional style, that clearly communicates information.
+I want my website to have a professional look to it, I plan on having a simple colour palette and sharp edges.
 
 
 ## FUNCTIONALITY
@@ -65,7 +65,7 @@ Functionality means that your system should always work under different circumst
 
 ### Relevance to the System
 
-Since it should be counvinient to use my website, it should work quickly and on all devices.
+The purpose of my website is convenience, So 
 
 ### Impact / Considerations
 
