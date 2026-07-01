@@ -65,11 +65,11 @@ Functionality means that your system should always work under different circumst
 
 ### Relevance to the System
 
-The purpose of my website is convenience, So 
+The purpose of my website is convenience, so having it work on multiple devices is a must, especially for phones, as those are often the most convenient device around.
 
 ### Impact / Considerations
 
-I will need to make sure that the website runs smoothly and efficiently under all circumstances.
+I need to test my website with different aspect ratios corresponding to different devices to check that the formating doesn't break.
 
 
 ## USABILITY
@@ -82,7 +82,7 @@ My website needs to be quick to use and easy to understand so that anyone can us
 
 ### Impact / Considerations
 
-Everything should be clearly labeled and easy to access.
+I need to keep the layout of buttons and other features of my website consistent, as well as including error pop ups to increase communication with the user.
 
 
 
