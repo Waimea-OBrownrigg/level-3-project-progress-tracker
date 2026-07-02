@@ -89,7 +89,20 @@ I need to keep the layout of buttons and other features of my website consistent
 # User Experience (UX) Principles
 
 
-## NAME OF UX PRINCIPLE 1
+## Know Your User
+
+This principle is about keeping your end users in mind, to make sure that the system isn't built around the wrong demographic.
+
+### Relevance to the System
+
+
+
+### Impact / Considerations
+
+Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this principle.
+
+
+## Clear User Flows
 
 Replace this text with a clear explanation of what the principle means.
 
@@ -102,20 +115,7 @@ Replace this text with an explanation of why the principle is relevant to this p
 Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this principle.
 
 
-## NAME OF UX PRINCIPLE 2
-
-Replace this text with a clear explanation of what the principle means.
-
-### Relevance to the System
-
-Replace this text with an explanation of why the principle is relevant to this particular project.
-
-### Impact / Considerations
-
-Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this principle.
-
-
-## NAME OF UX PRINCIPLE 3
+## Clear, Helpful Language
 
 Replace this text with a clear explanation of what the principle means.
 
