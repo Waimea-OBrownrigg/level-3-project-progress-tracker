@@ -89,26 +89,26 @@ I need to keep the layout of buttons and other features of my website consistent
 # User Experience (UX) Principles
 
 
-## Know Your User
+## Keep Tasks Quick
 
-This principle is about keeping your end users in mind, to make sure that the system isn't built around the wrong demographic.
+This principle is about making sure tasks take as little effort and time as possible by reducing unnecesary content.
 
 ### Relevance to the System
 
-
+Again, my website should be convenient to use, so cutting down on the time it takes to complete a task is of utmost importance.
 
 ### Impact / Considerations
 
-Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this principle.
+I want to cut out as many unnecesary steps for the customer as possible, the ideal outcome of this would be there only being two necessary pages to find and view the job, but whether I can obtain this or not remains to be seen.
 
 
 ## Clear User Flows
 
-Replace this text with a clear explanation of what the principle means.
+Using clear user flows involves making sure that navigating the system is easy, by making it clear where the user has to go, reducing time taken, and eliminating dead ends.
 
 ### Relevance to the System
 
-Replace this text with an explanation of why the principle is relevant to this particular project.
+
 
 ### Impact / Considerations
 
