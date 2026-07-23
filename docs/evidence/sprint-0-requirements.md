@@ -108,11 +108,10 @@ Using clear user flows involves making sure that navigating the system is easy, 
 
 ### Relevance to the System
 
-
+I want to make sure that my website takes as little time to use as possible and making sure that users won't get lost looking for a way forward is a good step to take to better the experience.
 
 ### Impact / Considerations
 
-Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this principle.
 
 
 ## Clear, Helpful Language
