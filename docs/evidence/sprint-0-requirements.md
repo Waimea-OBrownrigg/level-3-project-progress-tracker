@@ -112,16 +112,16 @@ I want to make sure that my website takes as little time to use as possible and 
 
 ### Impact / Considerations
 
-
+I need to make sure you can get to almost anny page very quickly while also not overwhelming users with too many buttons, I should also have an easy way to go back at any time.
 
 ## Clear, Helpful Language
 
-Replace this text with a clear explanation of what the principle means.
+This principle just means making sure that text and buttons are clear about their purpose and easy to understand.
 
 ### Relevance to the System
 
-Replace this text with an explanation of why the principle is relevant to this particular project.
+My website will most likely have two types of users, employees, and customers, I wan't to make it clear which is for which so as to avoid confusion.
 
 ### Impact / Considerations
 
-Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this principle.
+I will try to avoid ambiguity, while also not being to wordy, essentialy I need to find a good balance between the two.
