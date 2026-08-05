@@ -25,22 +25,22 @@ Develop a design for the database and a UI prototype that simulates the key func
 
 ## Initial Database Design
 
-Replace this text with notes regarding the DB design.
+So far my database has three tables, one for user acounts, one for projects, and one for milestones in projects.
 
-![DB Design](screenshots/placeholder.png)
+![DB Design](screenshots/dbprototype.png)
 
 
 ### Required Data Input
 
-Replace this text with a description of what data will be input, and where / how it will be obtained.
+for acounts I need a username and password. which will be submited by an user on the sign up page. For projects I need an user ID, name, description, milestones with a percentage attached, user ID will be taken from the user creating the project, while they will have to manually submit the other values using a text box for name, description, and milestones, plus a slider for the attached percentage.
 
 ### Required Data Output
 
-Replace this text with a description of the outputs for the system - what types of data will be displayed?
+My website will display the data in the project and mileston tables, excluding the user_id column on the projects table, and the id and project_id columns on the milestones table.
 
 ### Required Data Processing
 
-Replace this text with a description of how the data will be processed to achieve the desired output(s) - any processes / formulae?
+once the user inputs a password when signing up and logging in it will need to be hashed before it is stored in the database.
 
 
 ## UI 'Flow'
