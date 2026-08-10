@@ -25,14 +25,14 @@ Develop a design for the database and a UI prototype that simulates the key func
 
 ## Initial Database Design
 
-So far my database has three tables, one for user acounts, one for projects, and one for milestones in projects.
+So far my database has three tables, one for user accounts, one for projects, and one for milestones in projects.
 
 ![DB Design](screenshots/dbprototype.png)
 
 
 ### Required Data Input
 
-for acounts I need a username and password. which will be submited by an user on the sign up page. For projects I need an user ID, name, description, milestones with a percentage attached, user ID will be taken from the user creating the project, while they will have to manually submit the other values using a text box for name, description, and milestones, plus a slider for the attached percentage.
+For accounts I need a username and password. which will be submited by an user on the sign up page. For projects I need an user ID, name, description, milestones with a percentage attached, user ID will be taken from the user creating the project, while they will have to manually submit the other values using a text box for name, description, and milestones, plus a slider for the attached percentage.
 
 ### Required Data Output
 
@@ -40,39 +40,20 @@ My website will display the data in the project and mileston tables, excluding t
 
 ### Required Data Processing
 
-once the user inputs a password when signing up and logging in it will need to be hashed before it is stored in the database.
-
-
-## UI 'Flow'
-
-The first stage of prototyping was to explore how the UI might 'flow' between states, based on the required functionality.
-
-This Figma demo shows the initial design for the UI 'flow':
-
-**FIGMA FLOW - PLACE THE FIGMA EMBED CODE HERE - MAKE SURE IT IS SET SO THAT EVERYONE CAN ACCESS IT**
-
-### Testing
-
-Replace this text with notes about what you did to test the UI flow and the outcome of the testing.
-
-### Changes / Improvements
-
-Replace this text with notes any improvements you made as a result of the testing.
-
-*IMPROVED FIGMA FLOW - PLACE THE FIGMA EMBED CODE HERE - MAKE SURE IT IS SET SO THAT EVERYONE CAN ACCESS IT*
+When the user inputs a password when signing up and logging in it will need to be hashed before it is stored in the database.
 
 
 ## Initial UI Prototype
 
-The next stage of prototyping was to develop the layout for each screen of the UI.
+Prototyping a layout for each screen of the UI to see what features are still needed and how useability can be improved.
 
 This Figma demo shows the initial layout design for the UI:
 
-*FIGMA PROTOTYPE - PLACE THE FIGMA EMBED CODE HERE - MAKE SURE IT IS SET SO THAT EVERYONE CAN ACCESS IT*
+[UI Prototype](https://design.penpot.app/#/view?file-id=f0485fb1-4e63-8165-8008-3908ef3fa4ef&page-id=f0485fb1-4e63-8165-8008-3908ef3fa4f0&section=interactions&index=0&share-id=3be9e5e1-190f-8090-8008-717ebf12c2e7)
 
 ### Testing
 
-Replace this text with notes about what you did to test the UI flow and the outcome of the testing.
+After testing and receiving feedback I've decided that I need more customizeable accounts, which I will probably be renaming to: "Organisations" I should also add a page specifically for editing already existing accounts 
 
 ### Changes / Improvements
 
