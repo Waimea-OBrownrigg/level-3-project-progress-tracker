@@ -53,7 +53,7 @@ This Figma demo shows the initial layout design for the UI:
 
 ### Testing
 
-After testing and receiving feedback I've decided that I need more customizeable accounts, which I will probably be renaming to: "Organisations" I should also add a page specifically for editing already existing accounts 
+After testing and receiving feedback I've decided that I need more customizeable accounts, which I will probably be renaming to "Organisations", and makin a page to view an organisation. I should also add a page specifically for editing already existing organisations. I'll add a private option for projects as well.
 
 ### Changes / Improvements
 
