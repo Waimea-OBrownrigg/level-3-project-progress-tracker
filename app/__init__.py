@@ -20,27 +20,71 @@ app = Flask(__name__)
 # App Routes Handlers
 #===========================================================
 
-#-----------------------------------------------------------
-# Home page - Show all notes
-#-----------------------------------------------------------
+# #-----------------------------------------------------------
+# # Home page - Show all notes
+# #-----------------------------------------------------------
+# @app.get("/")
+# def show_home_page():
+#     with connect_db() as db:
+#         sql = """
+#             SELECT id, title, body, pinned, created
+#             FROM note
+#             ORDER BY pinned DESC, created DESC
+#         """
+#         params = ()
+#         notes = db.execute(sql, params).fetchall()
+
+#         flash("Test message")
+#         flash("Test SUCCESS message", "success")
+#         flash("Test INFO message", "info")
+#         flash("Test WARNING message", "warning")
+#         flash("Test ERROR message", "error")
+
+#         return render_template("pages/note_list.jinja", notes=notes)
+
+
+#===========================================================
+# Home Page
+#===========================================================
 @app.get("/")
-def show_notes():
+def show_home_page():
+    return render_template("pages/home.jinja")
+
+#===========================================================
+# Sign Up Page
+#===========================================================
+@app.get("/signup/form")
+def show_sign_up_page():
+    return render_template("pages/sign_up.jinja")
+
+#===========================================================
+# Create New Account
+#===========================================================
+@app.post("/signup")
+def create_account():
+    username = request.form.get('username', '').strip().lower()
+    password = request.form.get('password', '').strip()
+
     with connect_db() as db:
+        sql = "SELECT id FROM users WHERE username=?"
+        params = (username,)
+        user = db.execute(sql, params).fetchone()
+
+        if user:
+            flash(f"That username is already taken.", "error")
+            return redirect("/signup/form")
+
+        pass_hash = generate_password_hash(password)
+
         sql = """
-            SELECT id, title, body, pinned, created
-            FROM note
-            ORDER BY pinned DESC, created DESC
+            INSERT INTO users (username, pass_hash)
+            VALUES (?, ?)
         """
-        params = ()
-        notes = db.execute(sql, params).fetchall()
+        params = (username, pass_hash)
+        db.execute(sql, params)
 
-        flash("Test message")
-        flash("Test SUCCESS message", "success")
-        flash("Test INFO message", "info")
-        flash("Test WARNING message", "warning")
-        flash("Test ERROR message", "error")
-
-        return render_template("pages/note_list.jinja", notes=notes)
+        flash("Account created, please login", "success")
+        return redirect("/login/form")
 
 
 #===========================================================

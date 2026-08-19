@@ -1,0 +1,30 @@
+{#=====================================================
+  sign-up page
+=====================================================#}
+
+{% extends 'pages/_base.jinja' %}
+
+
+{% block content %}
+
+    <h2>Sign Up</h2>
+
+    <section id="form">
+
+       <form method="post" action="/signup">
+            <label>
+                Username
+                <input name="username" type="text" required>
+            </label>
+            <label>
+                Password
+                <input name="password" type="password" required>
+            </label>
+
+            <button>Sign Up</button>
+        </form>
+
+    </section>
+
+{% endblock %}
+
