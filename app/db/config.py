@@ -23,7 +23,7 @@ class UserTable:
         CREATE TABLE users (
             id      INTEGER PRIMARY KEY AUTOINCREMENT,
             username   TEXT NOT NULL,
-            pass_hash   int
+            pass_hash   INT NOT NULL
         )
     """
 

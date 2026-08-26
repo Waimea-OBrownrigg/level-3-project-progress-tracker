@@ -30,9 +30,14 @@
         </a>
 
         <nav>
-            <a href="/signup/form">Sign Up</a>
-            <a href="/">Link</a>
-            <a href="/">Link</a>
+            {% if session.logged_in%}
+                <a href="/logout">Log Out</a>
+            {% else %}
+                <a href="/signup/form">Sign Up</a>
+                <a href="/login/form">Log In</a>
+            {% endif %}
+
+            
         </nav>
     </header>
 

@@ -86,6 +86,56 @@ def create_account():
         flash("Account created, please login", "success")
         return redirect("/login/form")
 
+#===========================================================
+# Log In Page
+#===========================================================
+@app.get("/login/form")
+def show_log_in_page():
+    return render_template("pages/log_in.jinja")
+
+#===========================================================
+# LogIn User
+#===========================================================
+@app.post("/login")
+def log_in():
+    username = request.form.get('username', '').strip().lower()
+    password = request.form.get('password', '').strip()
+
+    with connect_db() as db:
+        sql = """
+            SELECT id, username, pass_hash
+            FROM users
+            WHERE username=?
+        """
+        params = (username,)
+        user = db.execute(sql, params).fetchone()
+
+        if not user:
+            flash(f"This account does not exist.", "error")
+            return redirect("/login/form")
+
+        if not check_password_hash(user["pass_hash"], password):
+            flash(f"That password does not match ", "error")
+            return redirect("/login/form")
+
+        session["logged_in"] = True
+        session["user"] = {
+            "id":       user["id"],
+            "username": user["username"],
+        }
+
+        flash("Login successful", "success")
+        return redirect("/")
+
+#===========================================================
+# LogOut User
+#===========================================================
+@app.get("/logout")
+def log_out():
+    session.clear()
+    flash(f"Logged out successfuly", "success")
+    return redirect("/")
+
 
 #===========================================================
 # Configure the app
