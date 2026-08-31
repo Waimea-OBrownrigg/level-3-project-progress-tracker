@@ -136,6 +136,13 @@ def log_out():
     flash(f"Logged out successfuly", "success")
     return redirect("/")
 
+#===========================================================
+# Search Tracker ID
+#===========================================================
+@app.post("/search")
+def search():
+    target_id = request.form.get('id', '').strip()
+
 
 #===========================================================
 # Configure the app

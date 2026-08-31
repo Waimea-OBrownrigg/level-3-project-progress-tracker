@@ -33,6 +33,23 @@ class UserTable:
             ("PlaceMcholder","1")
     """
 
+class TrackerTable:
+
+    NAME = "trackers"
+
+    SCHEMA = """
+        CREATE TABLE trackers (
+            id      INTEGER PRIMARY KEY AUTOINCREMENT,
+            name   TEXT NOT NULL,
+        )
+    """
+
+    SEED_DATA = """
+        INSERT INTO trackers (name)
+        VALUES
+            ("Really Cool Project")
+    """
+
 # Add more table classes here...
 
 
@@ -54,6 +71,6 @@ class UserTable:
 
 TABLES = [
     UserTable,
-    # Add more tables here...
+    TrackerTable
 ]
 
