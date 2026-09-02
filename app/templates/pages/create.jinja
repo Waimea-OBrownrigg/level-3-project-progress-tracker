@@ -1,5 +1,5 @@
 {#=====================================================
-  Log-in page
+  Create new tracker page
 =====================================================#}
 
 {% extends 'pages/_base.jinja' %}
@@ -7,11 +7,11 @@
 
 {% block content %}
 
-    <h2>Log in</h2>
+    <h2> </h2>
 
     <section id="form">
 
-       <form method="post" action="/login">
+       <form method="post" action="/signup">
             <label>
                 Username
                 <input name="username" type="text" required>
@@ -21,7 +21,7 @@
                 <input name="password" type="password" required>
             </label>
 
-            <button>Log in</button>
+            <button>Sign Up</button>
         </form>
 
     </section>

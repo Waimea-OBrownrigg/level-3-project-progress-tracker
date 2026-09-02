@@ -143,6 +143,22 @@ def log_out():
 def search():
     target_id = request.form.get('id', '').strip()
 
+    with connect_db() as db:
+        sql = """
+            SELECT id, name
+            FROM trackers
+            where id = ?
+        """
+        params = (target_id,)
+        tracker = db.execute(sql, params).fetchone()
+
+        if not tracker:
+            flash(f"No results found matching that ID", "error")
+            return redirect("/")
+
+        return render_template("pages/view_page.jinja", info = tracker)
+
+
 
 #===========================================================
 # Configure the app

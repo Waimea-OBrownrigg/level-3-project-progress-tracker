@@ -40,7 +40,7 @@ class TrackerTable:
     SCHEMA = """
         CREATE TABLE trackers (
             id      INTEGER PRIMARY KEY AUTOINCREMENT,
-            name   TEXT NOT NULL,
+            name   TEXT NOT NULL
         )
     """
 
