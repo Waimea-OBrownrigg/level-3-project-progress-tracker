@@ -23,5 +23,9 @@
 
     </section>
 
+    {% if session.logged_in %}
+        <a href="/create/form">New Project</a>
+    {% endif %}
+
 {% endblock %}
 

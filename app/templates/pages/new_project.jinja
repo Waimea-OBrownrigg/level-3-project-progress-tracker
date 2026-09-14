@@ -1,0 +1,26 @@
+{#=====================================================
+  Project creation page
+=====================================================#}
+
+{% extends 'pages/_base.jinja' %}
+
+
+{% block content %}
+
+    <h2>Create project</h2>
+
+    <section id="form">
+
+       <form method="post" action="/create">
+            <label>
+                Name
+                <input name="name" type="text" required>
+            </label>
+
+            <button>Submit</button>
+        </form>
+
+    </section>
+
+{% endblock %}
+

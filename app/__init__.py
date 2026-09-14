@@ -158,6 +158,30 @@ def search():
 
         return render_template("pages/view_page.jinja", info = tracker)
 
+#===========================================================
+# Project creation Page
+#===========================================================
+@app.get("/create/form")
+def show_creation_page():
+    return render_template("pages/new_project.jinja")
+
+#===========================================================
+# Create Project
+#===========================================================
+@app.post("/create")
+def create_project():
+    name = request.form.get('name', '').strip()
+
+        sql = """
+            INSERT INTO trackers (name)
+            VALUES (?)
+        """
+        params = (name)
+        db.execute(sql, params)
+
+        flash("project created", "success")
+        return redirect("/")
+
 
 
 #===========================================================
