@@ -21,8 +21,8 @@ class UserTable:
 
     SCHEMA = """
         CREATE TABLE users (
-            id      INTEGER PRIMARY KEY AUTOINCREMENT,
-            username   TEXT NOT NULL,
+            id          INTEGER PRIMARY KEY AUTOINCREMENT,
+            username    TEXT NOT NULL,
             pass_hash   INT NOT NULL
         )
     """
@@ -39,7 +39,7 @@ class TrackerTable:
 
     SCHEMA = """
         CREATE TABLE trackers (
-            id      INTEGER PRIMARY KEY AUTOINCREMENT,
+            id     INTEGER PRIMARY KEY AUTOINCREMENT,
             name   TEXT NOT NULL
         )
     """
@@ -48,6 +48,18 @@ class TrackerTable:
         INSERT INTO trackers (name)
         VALUES
             ("Really Cool Project")
+    """
+
+class TargetTable:
+
+    NAME = "milestones"
+
+    SCHEMA = """
+        CREATE TABLE milestones (
+            id       INTEGER PRIMARY KEY AUTOINCREMENT,
+            name     TEXT NOT NULL,
+            status   BOOLEAN NOT NULL
+        )
     """
 
 # Add more table classes here...

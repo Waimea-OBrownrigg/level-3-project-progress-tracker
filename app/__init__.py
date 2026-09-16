@@ -94,7 +94,7 @@ def show_log_in_page():
     return render_template("pages/log_in.jinja")
 
 #===========================================================
-# LogIn User
+# Log In User
 #===========================================================
 @app.post("/login")
 def log_in():
@@ -172,11 +172,12 @@ def show_creation_page():
 def create_project():
     name = request.form.get('name', '').strip()
 
+    with connect_db() as db:
         sql = """
             INSERT INTO trackers (name)
             VALUES (?)
         """
-        params = (name)
+        params = (name,)
         db.execute(sql, params)
 
         flash("project created", "success")
@@ -195,4 +196,3 @@ init_date_filters(app)
 init_error_handlers(app)
 init_database()
 register_commands(app)
-
