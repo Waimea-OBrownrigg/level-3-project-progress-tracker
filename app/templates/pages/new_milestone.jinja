@@ -1,0 +1,49 @@
+{#=====================================================
+  Project creation page
+=====================================================#}
+
+{% extends 'pages/_base.jinja' %}
+
+
+{% block content %}
+
+    <h2>Define Milestones</h2>
+
+    Project: {{ project.name }}
+    Description: {{ project.description }}
+
+    <h3>Current Milestones</h3>
+
+    <ul>
+        {% for milestone in milestones %}
+            <li>{{ milestone.name }}</li>
+        {% endfor%}
+    </ul>
+
+    <h4>New Milestone</h4>
+    <section id="form">
+
+        <form method="post" action="/create">
+
+            <form method="post" action="/addm">
+
+                <label>
+                    Name
+                    <input name="name" type="text" required>
+                </label>
+
+                <label>
+                    Add Milestone
+                    <input name="m_name" type="text" required>
+                </label>
+
+                <button>Add</button>
+            </form>
+
+            <button>Submit</button>
+        </form>
+
+    </section>
+
+{% endblock %}
+

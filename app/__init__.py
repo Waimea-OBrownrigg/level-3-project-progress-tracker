@@ -137,52 +137,74 @@ def log_out():
     return redirect("/")
 
 #===========================================================
-# Search Tracker ID
+# Search Project ID
 #===========================================================
 @app.post("/search")
 def search():
-    target_id = request.form.get('id', '').strip()
+    project_id = request.form.get('id', '').strip()
 
     with connect_db() as db:
         sql = """
             SELECT id, name
-            FROM trackers
+            FROM projects
             where id = ?
         """
-        params = (target_id,)
-        tracker = db.execute(sql, params).fetchone()
+        params = (project_id,)
+        project = db.execute(sql, params).fetchone()
 
-        if not tracker:
+        if not project:
             flash(f"No results found matching that ID", "error")
             return redirect("/")
 
-        return render_template("pages/view_page.jinja", info = tracker)
+        return render_template("pages/view_page.jinja", info = project)
 
 #===========================================================
 # Project creation Page
 #===========================================================
-@app.get("/create/form")
-def show_creation_page():
+@app.get("/project/new")
+def show_project_form():
     return render_template("pages/new_project.jinja")
 
 #===========================================================
 # Create Project
 #===========================================================
-@app.post("/create")
+@app.post("/project/new")
 def create_project():
     name = request.form.get('name', '').strip()
+    desc = request.form.get('desc', '').strip()
 
     with connect_db() as db:
         sql = """
-            INSERT INTO trackers (name)
-            VALUES (?)
+            INSERT INTO projects (name, desc)
+            VALUES (?, ?)
         """
-        params = (name,)
-        db.execute(sql, params)
+        params = (name, desc)
+        result = db.execute(sql, params)
+        new_project_id = result.lastrowid
+
+        session["project"] = new_project_id
 
         flash("project created", "success")
-        return redirect("/")
+        return redirect("/project/milestone/new")
 
+
+#===========================================================
+# Project creation Page
+#===========================================================
+@app.get("/project/milestone/new")
+def show_milestone_form():
+    project_id = session["project"]
+    
+    with connect_db() as db:
+        sql = """
+            SELECT id, name, description
+            FROM projects
+            where id = ?
+        """
+        params = (project_id,)
+        project = db.execute(sql, params).fetchone()
+
+    return render_template("pages/new_milestone.jinja", project=project)
 
 
 #===========================================================

@@ -35,17 +35,18 @@ class UserTable:
 
 class TrackerTable:
 
-    NAME = "trackers"
+    NAME = "projects"
 
     SCHEMA = """
-        CREATE TABLE trackers (
+        CREATE TABLE projects (
             id     INTEGER PRIMARY KEY AUTOINCREMENT,
             name   TEXT NOT NULL
+            desc   TEXT
         )
     """
 
     SEED_DATA = """
-        INSERT INTO trackers (name)
+        INSERT INTO projects (name)
         VALUES
             ("Really Cool Project")
     """
@@ -56,9 +57,10 @@ class TargetTable:
 
     SCHEMA = """
         CREATE TABLE milestones (
-            id       INTEGER PRIMARY KEY AUTOINCREMENT,
-            name     TEXT NOT NULL,
-            status   BOOLEAN NOT NULL
+            id           INTEGER PRIMARY KEY AUTOINCREMENT,
+            name         TEXT NOT NULL,
+            status       BOOLEAN NOT NULL,
+            project_id   INT NOT NULL
         )
     """
 
