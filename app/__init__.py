@@ -184,12 +184,11 @@ def create_project():
 
         session["project"] = new_project_id
 
-        flash("project created", "success")
         return redirect("/project/milestone/new")
 
 
 #===========================================================
-# Project creation Page
+# Milestone creation Page
 #===========================================================
 @app.get("/project/milestone/new")
 def show_milestone_form():
@@ -197,7 +196,7 @@ def show_milestone_form():
     
     with connect_db() as db:
         sql = """
-            SELECT id, name, description
+            SELECT id, name, desc
             FROM projects
             where id = ?
         """

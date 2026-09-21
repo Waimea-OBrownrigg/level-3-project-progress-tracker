@@ -10,7 +10,7 @@
     <h2>Define Milestones</h2>
 
     Project: {{ project.name }}
-    Description: {{ project.description }}
+    Description: {{ project.desc }}
 
     <h3>Current Milestones</h3>
 
@@ -23,24 +23,19 @@
     <h4>New Milestone</h4>
     <section id="form">
 
-        <form method="post" action="/create">
+        <form method="post" action="/addm">
 
-            <form method="post" action="/addm">
+            <label>
+                Name
+                <input name="name" type="text" required>
+            </label>
 
-                <label>
-                    Name
-                    <input name="name" type="text" required>
-                </label>
+            <label>
+                Complete
+                <input name="complete" type="checkbox" required>
+            </label>
 
-                <label>
-                    Add Milestone
-                    <input name="m_name" type="text" required>
-                </label>
-
-                <button>Add</button>
-            </form>
-
-            <button>Submit</button>
+            <button>Add</button>
         </form>
 
     </section>

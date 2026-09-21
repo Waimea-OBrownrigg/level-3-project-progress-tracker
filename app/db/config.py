@@ -40,7 +40,7 @@ class TrackerTable:
     SCHEMA = """
         CREATE TABLE projects (
             id     INTEGER PRIMARY KEY AUTOINCREMENT,
-            name   TEXT NOT NULL
+            name   TEXT NOT NULL,
             desc   TEXT
         )
     """
@@ -62,6 +62,12 @@ class TargetTable:
             status       BOOLEAN NOT NULL,
             project_id   INT NOT NULL
         )
+    """
+
+    SEED_DATA = """
+        INSERT INTO milestones (name, status, project_id)
+        VALUES
+            ("Really Cool Project", "TRUE", "1")
     """
 
 # Add more table classes here...
