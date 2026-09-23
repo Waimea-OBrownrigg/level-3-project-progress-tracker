@@ -147,7 +147,7 @@ def search():
         sql = """
             SELECT id, name
             FROM projects
-            where id = ?
+            WHERE id = ?
         """
         params = (project_id,)
         project = db.execute(sql, params).fetchone()
@@ -198,12 +198,44 @@ def show_milestone_form():
         sql = """
             SELECT id, name, desc
             FROM projects
-            where id = ?
+            WHERE id = ?
         """
         params = (project_id,)
         project = db.execute(sql, params).fetchone()
 
     return render_template("pages/new_milestone.jinja", project=project)
+
+
+#===========================================================
+# Add Milestone
+#===========================================================
+@app.post("/addm")
+def add_milestone(): 
+    project_id = session["project"]
+    name = request.form.get('name', '').strip()
+    status = request.form.get('status', '')
+    
+    with connect_db() as db:
+         sql = """
+             INSERT INTO milestones (name, status, project_id)
+             WHERE id = ?
+             VALUES (?, ?, ?)
+         """
+         params = (project_id, name, status)
+         db.execute(sql, params)
+
+    with connect_db() as db:
+        sql = """
+            SELECT id, name, desc
+            FROM projects
+            WHERE id = ?
+        """
+        params = (project_id,)
+        project = db.execute(sql, params).fetchone()
+
+    return render_template("pages/new_milestone.jinja", project=project)
+
+
 
 
 #===========================================================

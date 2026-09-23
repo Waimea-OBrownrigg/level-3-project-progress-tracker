@@ -16,7 +16,9 @@
 
     <ul>
         {% for milestone in milestones %}
-            <li>{{ milestone.name }}</li>
+            {% if milestone.project_id == project_id %}
+                <li>{{ milestone.name }}</li>
+            {% endif %}
         {% endfor%}
     </ul>
 
@@ -32,7 +34,7 @@
 
             <label>
                 Complete
-                <input name="complete" type="checkbox" required>
+                <input name="status" type="checkbox">
             </label>
 
             <button>Add</button>
