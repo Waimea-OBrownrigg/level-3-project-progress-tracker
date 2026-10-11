@@ -53,13 +53,13 @@ This Figma demo shows the initial layout design for the UI:
 
 ### Testing
 
-After testing and receiving feedback I've decided that I need more customizeable accounts, which I will probably be renaming to "Organisations", and makin a page to view an organisation. I should also add a page specifically for editing already existing organisations. I'll add a private option for projects as well.
+The prototype works relatively smoothly, but is missing some vital features, the most glaring one being that using a code to view a project every time would be really annoying, especially if you're keeping track of multiple projects at a time.
 
 ### Changes / Improvements
 
-Replace this text with notes any improvements you made as a result of the testing.
+I've decided that I need more customizable accounts, and to make a page to view them. I should also add a page specifically for editing already existing accounts. I should also make it so that accounts can go directly to their own projects from the main screen as well as other projects that have been saved previously. I've also decided that instead of specializing my project towards one specific field, it would probably even be easier to make it general purpose.
 
-*FIGMA IMPROVED PROTOTYPE - PLACE THE FIGMA EMBED CODE HERE - MAKE SURE IT IS SET SO THAT EVERYONE CAN ACCESS IT*
+[UI Improved Prototype](https://design.penpot.app/#/view?file-id=81f57451-85cc-819d-8008-7834172af4b1&page-id=f0485fb1-4e63-8165-8008-3908ef3fa4f0&section=interactions&index=0&share-id=7c587dbb-01be-44b7-bea3-81c19c104c7b)
 
 
 ## Refined UI Prototype
