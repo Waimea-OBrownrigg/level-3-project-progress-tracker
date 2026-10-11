@@ -218,10 +218,9 @@ def add_milestone():
     with connect_db() as db:
          sql = """
              INSERT INTO milestones (name, status, project_id)
-             WHERE id = ?
              VALUES (?, ?, ?)
          """
-         params = (project_id, name, status)
+         params = (name, status, project_id)
          db.execute(sql, params)
 
     with connect_db() as db:
@@ -233,7 +232,7 @@ def add_milestone():
         params = (project_id,)
         project = db.execute(sql, params).fetchone()
 
-    return render_template("pages/new_milestone.jinja", project=project)
+    return render_template("pages/new_milestone.jinja", project=project)  
 
 
 

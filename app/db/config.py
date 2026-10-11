@@ -67,7 +67,7 @@ class TargetTable:
     SEED_DATA = """
         INSERT INTO milestones (name, status, project_id)
         VALUES
-            ("Really Cool Project", "TRUE", "1")
+            ("Really Cool Milestone", "TRUE", "1")
     """
 
 # Add more table classes here...
@@ -91,6 +91,7 @@ class TargetTable:
 
 TABLES = [
     UserTable,
-    TrackerTable
+    TrackerTable,
+    TargetTable
 ]
 
