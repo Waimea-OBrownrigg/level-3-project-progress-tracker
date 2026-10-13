@@ -180,7 +180,15 @@ def show_milestone_form():
         params = (project_id,)
         project = db.execute(sql, params).fetchone()
 
-    return render_template("pages/new_milestone.jinja", project=project)
+        sql = """
+            SELECT name
+            FROM milestones
+            WHERE project_id = ?
+        """
+        params = (project_id,)
+        milestones = db.execute(sql, params).fetchall()
+
+    return render_template("pages/new_milestone.jinja", project=project, milestones=milestones)
 
 
 #===========================================================
@@ -200,16 +208,7 @@ def add_milestone():
          params = (name, status, project_id)
          db.execute(sql, params)
 
-    with connect_db() as db:
-        sql = """
-            SELECT id, name, desc
-            FROM projects
-            WHERE id = ?
-        """
-        params = (project_id,)
-        project = db.execute(sql, params).fetchone()
-
-    return render_template("pages/new_milestone.jinja", project=project)  
+    return redirect("/project/milestone/new")
 
 
 
