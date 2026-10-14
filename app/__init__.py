@@ -20,6 +20,7 @@ app = Flask(__name__)
 # App Routes Handlers
 #===========================================================
 
+
 #===========================================================
 # Home Page
 #===========================================================
@@ -120,20 +121,36 @@ def log_out():
 def search():
     project_id = request.form.get('id', '').strip()
 
+    return redirect(f"/show/{project_id}")
+
+#===========================================================
+# Show Project
+#===========================================================
+@app.get("/show/<int:id>")
+def show(id):
+   
     with connect_db() as db:
         sql = """
-            SELECT id, name
+            SELECT id, name, desc
             FROM projects
             WHERE id = ?
         """
-        params = (project_id,)
+        params = (id,)
         project = db.execute(sql, params).fetchone()
+
+        sql = """
+            SELECT name, status
+            FROM milestones
+            WHERE project_id = ?
+        """
+        params = (id,)
+        milestones = db.execute(sql, params).fetchall()
 
         if not project:
             flash(f"No results found matching that ID", "error")
             return redirect("/")
 
-        return render_template("pages/view_page.jinja", info = project)
+        return render_template("pages/view_page.jinja", p_info = project, m_info = milestones)
 
 #===========================================================
 # Project creation Page
@@ -163,7 +180,6 @@ def create_project():
 
         return redirect("/project/milestone/new")
 
-
 #===========================================================
 # Milestone creation Page
 #===========================================================
@@ -189,7 +205,6 @@ def show_milestone_form():
         milestones = db.execute(sql, params).fetchall()
 
     return render_template("pages/new_milestone.jinja", project=project, milestones=milestones)
-
 
 #===========================================================
 # Add Milestone
