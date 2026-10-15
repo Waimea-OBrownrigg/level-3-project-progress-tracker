@@ -67,7 +67,7 @@ class TargetTable:
     SEED_DATA = """
         INSERT INTO milestones (name, status, project_id)
         VALUES
-            ("Really Cool Milestone", "on", "1")
+            ("Really Cool Milestone", "True", "1")
     """
 
 # Add more table classes here...

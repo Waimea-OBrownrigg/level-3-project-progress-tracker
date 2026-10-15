@@ -213,7 +213,7 @@ def show_milestone_form():
 def add_milestone(): 
     project_id = session["project"]
     name = request.form.get('name', '').strip()
-    status = request.form.get('status', '')
+    status = request.form.get('status' ) is not None
     
     with connect_db() as db:
          sql = """

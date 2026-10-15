@@ -7,9 +7,24 @@
 
 {% block content %}
 
-    <h2>{{ p_info.name }}</h2>
+  <h2>{{ p_info.name }}</h2>
 
-    <p>{{ p_info.desc }}</p>
+  <p>{{ p_info.desc }}</p>
+
+  <p>Progress</p>
+
+  <ul>
+    {% for milestone in m_info %}
+      <li>
+        {{ m_info.name }}, 
+        {% if m_info.status == True %}
+          complete.
+        {% else %}
+          incomplete.
+        {% endif %}
+      </li>
+    {% endfor%}
+  </ul>
 
 {% endblock %}
 
