@@ -41,14 +41,15 @@ class TrackerTable:
         CREATE TABLE projects (
             id     INTEGER PRIMARY KEY AUTOINCREMENT,
             name   TEXT NOT NULL,
-            desc   TEXT
+            desc   TEXT,
+            creator_id INT NOT NULL
         )
     """
 
     SEED_DATA = """
-        INSERT INTO projects (name)
+        INSERT INTO projects (name, creator_id)
         VALUES
-            ("Really Cool Project")
+            ("Really Cool Project", "1")
     """
 
 class TargetTable:

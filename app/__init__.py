@@ -163,16 +163,18 @@ def show_project_form():
 # Create Project
 #===========================================================
 @app.post("/project/new")
+@login_required
 def create_project():
     name = request.form.get('name', '').strip()
     desc = request.form.get('desc', '').strip()
+    creator_id = session.get("user").get("id")
 
     with connect_db() as db:
         sql = """
-            INSERT INTO projects (name, desc)
-            VALUES (?, ?)
+            INSERT INTO projects (name, desc, creator_id)
+            VALUES (?, ?, ?)
         """
-        params = (name, desc)
+        params = (name, desc, creator_id)
         result = db.execute(sql, params)
         new_project_id = result.lastrowid
 
