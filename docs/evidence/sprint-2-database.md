@@ -12,18 +12,19 @@ Implement the database, populated with test data. Create queries that retrieve t
 - Implement the database
 - Add test data to the database
 - Create the following web pages:
-    - Home pages showing...
-    - Details page for ...
-    - Etc.
+    - Home page that can search projects
+    - Sign up/log in pages
+    - Project creation pages
+    - Project viewing pages
 - Develop SQL database queries to:
-    - Retrieve all ...
-    - Retrieve specific ...
-    - Etc.
+    - Retrieve and compare a password hash to log in
+    - Retrieve a project with an ID to display
+    - Retrieve all milestones attached to a project
 
 
-## Testing FEATURE NAME HERE
+## Testing sign up
 
-Replace this text with notes about what you are testing, how you tested it, and the outcome of the testing
+I am testing the page that creates new acounts, it should only accept the input when both field are empty and the username is unique.
 
 **PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE TESTING HERE**
 
@@ -36,9 +37,9 @@ Replace this text with notes any improvements you made as a result of the testin
 **PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE IMPROVED SYSTEM HERE**
 
 
-## Testing FEATURE NAME HERE
+## Testing log in
 
-Replace this text with notes about what you are testing, how you tested it, and the outcome of the testing
+Log in Just needs to make sure both fields are filled and the password matches.
 
 **PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE TESTING HERE**
 
@@ -49,9 +50,9 @@ Replace this text with notes any improvements you made as a result of the testin
 **PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE IMPROVED SYSTEM HERE**
 
 
-## Testing FEATURE NAME HERE
+## Testing display project
 
-Replace this text with notes about what you are testing, how you tested it, and the outcome of the testing
+When submitting an ID the website should bring back the correct project as well as all milestones attached to it.
 
 **PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE TESTING HERE**
 
