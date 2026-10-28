@@ -50,6 +50,8 @@ You should be able to create a project with a name, description, and milestones,
 
 ![Demonstration of the log in process.](screenshots/buggedprojectview.gif)
 
+There seems to be something wrong with the status flag, this means that all of the milestones are shown as incomplete.
+
 ### Changes / Improvements
 
 Replace this text with notes any improvements you made as a result of the testing.
