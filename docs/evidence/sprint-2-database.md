@@ -44,20 +44,17 @@ Log in Just needs to make sure both fields are filled and the password matches.
 None required.
 
 
-## Testing display project
+## Testing create and display project
 
-When submitting an ID the website should bring back the correct project as well as all milestones attached to it.
+You should be able to create a project with a name, description, and milestones, and you should then be able to search it's ID to view it.
 
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE TESTING HERE**
+![Demonstration of the log in process.](screenshots/buggedprojectview.gif)
 
 ### Changes / Improvements
 
 Replace this text with notes any improvements you made as a result of the testing.
 
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE IMPROVED SYSTEM HERE**
-
-
-## ETC...
+![Demonstration of the log in process.](screenshots/projectview.gif)
 
 
 ## Sprint Review
