@@ -24,30 +24,24 @@ Implement the database, populated with test data. Create queries that retrieve t
 
 ## Testing sign up
 
-I am testing the page that creates new acounts, it should only accept the input when both field are empty and the username is unique.
+I am testing the page that creates new accounts, it should only accept the input when both field are empty and the username is unique.
 
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE TESTING HERE**
-
-![Placeholder](screenshots/placeholder.png)
+![Demonstration of the sign up process.](screenshots/signup.gif)
 
 ### Changes / Improvements
 
-Replace this text with notes any improvements you made as a result of the testing.
-
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE IMPROVED SYSTEM HERE**
+None required.
 
 
 ## Testing log in
 
 Log in Just needs to make sure both fields are filled and the password matches.
 
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE TESTING HERE**
+![Demonstration of the log in process.](screenshots/login.gif)
 
 ### Changes / Improvements
 
-Replace this text with notes any improvements you made as a result of the testing.
-
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE IMPROVED SYSTEM HERE**
+None required.
 
 
 ## Testing display project

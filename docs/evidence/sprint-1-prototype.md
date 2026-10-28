@@ -32,7 +32,7 @@ So far my database has three tables, one for user accounts, one for projects, an
 
 ### Required Data Input
 
-For accounts I need a username and password. which will be submited by an user on the sign up page. For projects I need an user ID, name, description, milestones with a percentage attached, user ID will be taken from the user creating the project, while they will have to manually submit the other values using a text box for name, description, and milestones, plus a slider for the attached percentage.
+For accounts I need a username and password. which will be submitted by an user on the sign up page. For projects I need an user ID, name, description, milestones with a percentage attached, user ID will be taken from the user creating the project, while they will have to manually submit the other values using a text box for name, description, and milestones, plus a slider for the attached percentage.
 
 ### Required Data Output
 
