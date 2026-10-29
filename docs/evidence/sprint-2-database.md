@@ -54,12 +54,12 @@ There seems to be something wrong with the status flag, this means that all of t
 
 ### Changes / Improvements
 
-Replace this text with notes any improvements you made as a result of the testing.
+The problem was, the values the checkbox where returning weren't compatible with a boolean, so I had to add a line to make it compatible, anyway, it works now!
 
 ![Demonstration of the log in process.](screenshots/projectview.gif)
 
 
 ## Sprint Review
 
-Replace this text with a statement about how the sprint has moved the project forward - key success point, any things that didn't go so well, etc.
+
 
