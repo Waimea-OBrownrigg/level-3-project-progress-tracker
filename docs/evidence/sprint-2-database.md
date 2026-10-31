@@ -61,5 +61,4 @@ The problem was, the values the checkbox where returning weren't compatible with
 
 ## Sprint Review
 
-
-
+This sprint went by fairly smoothly, I managed to make functions that covered all of the things I required of my database.
