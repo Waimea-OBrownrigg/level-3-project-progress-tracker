@@ -10,24 +10,21 @@ Continue to develop the web application to the point that it provides all key fu
 **Edit these goals as needed**
 
 - Create the following web pages:
-    - Form for ...
-    - Etc.
+    - Form to edit projects
 - Develop SQL database queries to:
-    - Add a new ...
-    - Etc.
+    - List projects created by you on the home page
+    - Edit pre-existing data
 
 
-## Testing FEATURE NAME HERE
+## Displaying projects you created
 
-Replace this text with notes about what you are testing, how you tested it, and the outcome of the testing
+When you're logged in, the system works fine, there are links to all the projects and they all operate as intended, the problem is when you're logged out, the site crashes.
 
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE TESTING HERE**
-
-![Placeholder](screenshots/placeholder.png)
+![Placeholder](screenshots/brokenhomepage.gif)
 
 ### Changes / Improvements
 
-Replace this text with notes any improvements you made as a result of the testing.
+This happens because to get the projects that the user has created, the site tries to check if the user is logged in, but when the user is logged out, the variable that states this doesn't exist, resulting in the crash.
 
 **PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE IMPROVED SYSTEM HERE**
 

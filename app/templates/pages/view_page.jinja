@@ -28,5 +28,11 @@
 
   <p>Project ID: {{ p_info.id }}</p>
 
+  {% if session.logged_in %}
+    {% if session.id == p_info.creator_id %}
+      <a href="/edit/{{project.id}}">Update</a>
+    {% endif %}
+  {% endif %}
+
 {% endblock %}
 

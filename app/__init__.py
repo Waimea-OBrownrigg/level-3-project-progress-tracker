@@ -27,18 +27,18 @@ app = Flask(__name__)
 @app.get("/")
 def show_home_page():
     
-    if hasattr(session, 'logged_in'):
-        if (session["logged_in"] == True):
-            id = session.get("user").get("id")
 
-            with connect_db() as db:
-                sql = """
-                    SELECT id, name
-                    FROM projects
-                    WHERE creator_id = ?
-                """
-                params = (id,)
-                projects = db.execute(sql, params).fetchall()
+    if (session["logged_in"] == True):
+        id = session.get("user").get("id")
+
+        with connect_db() as db:
+            sql = """
+                SELECT id, name
+                FROM projects
+                WHERE creator_id = ?
+            """
+            params = (id,)
+            projects = db.execute(sql, params).fetchall()
     else:
         projects = ("nuthin")
 
@@ -147,7 +147,7 @@ def show(id):
    
     with connect_db() as db:
         sql = """
-            SELECT id, name, desc
+            SELECT id, name, desc, creator_id
             FROM projects
             WHERE id = ?
         """
