@@ -25,6 +25,11 @@
 
     {% if session.logged_in %}
         <a href="/project/new">New Project</a>
+
+        <p>My projects:</p>
+        {% for project in projects %}
+            <a href="/show/{{project.id}}">{{project.name}}</a>
+        {% endfor %}
     {% endif %}
 
 {% endblock %}

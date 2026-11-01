@@ -26,7 +26,23 @@ app = Flask(__name__)
 #===========================================================
 @app.get("/")
 def show_home_page():
-    return render_template("pages/home.jinja")
+    
+    if hasattr(session, 'logged_in'):
+        if (session["logged_in"] == True):
+            id = session.get("user").get("id")
+
+            with connect_db() as db:
+                sql = """
+                    SELECT id, name
+                    FROM projects
+                    WHERE creator_id = ?
+                """
+                params = (id,)
+                projects = db.execute(sql, params).fetchall()
+    else:
+        projects = ("nuthin")
+
+    return render_template("pages/home.jinja", projects=projects)
 
 #===========================================================
 # Sign Up Page
