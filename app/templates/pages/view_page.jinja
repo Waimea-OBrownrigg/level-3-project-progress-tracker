@@ -27,10 +27,11 @@
   </ul>
 
   <p>Project ID: {{ p_info.id }}</p>
+  <p>Project ID: {{ p_info.creator_id }}</p>
 
   {% if session.logged_in %}
-    {% if session.id == p_info.creator_id %}
-      <a href="/edit/{{project.id}}">Update</a>
+    {% if session.user.id == p_info.creator_id %}
+      <a href="/edit/{{p_info.id}}">Update</a>
     {% endif %}
   {% endif %}
 

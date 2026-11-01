@@ -28,7 +28,7 @@ app = Flask(__name__)
 def show_home_page():
     
 
-    if (session["logged_in"] == True):
+    if (session.get("logged_in")):
         id = session.get("user").get("id")
 
         with connect_db() as db:
@@ -243,6 +243,53 @@ def add_milestone():
 
     return redirect("/project/milestone/new")
 
+#===========================================================
+# Edit Project page
+#===========================================================
+@app.get("/edit/<int:id>")
+def edit(id):
+   
+    with connect_db() as db:
+        sql = """
+            SELECT id, name, desc
+            FROM projects
+            WHERE id = ?
+        """
+        params = (id,)
+        project = db.execute(sql, params).fetchone()
+
+        sql = """
+            SELECT id, name, status
+            FROM milestones
+            WHERE project_id = ?
+        """
+        params = (id,)
+        milestones = db.execute(sql, params).fetchall()
+
+        return render_template("pages/edit_page.jinja", p_info = project, m_info = milestones)
+
+#===========================================================
+# Edit Project
+#===========================================================
+@app.post("/update/<int:id>")
+@login_required
+def edit_project(id):
+    name = request.form.get('name', '').strip()
+    desc = request.form.get('desc', '').strip()
+    creator_id = session.get("user").get("id")
+
+    with connect_db() as db:
+        sql = """
+            INSERT INTO projects (name, desc, creator_id)
+            VALUES (?, ?, ?)
+        """
+        params = (name, desc, creator_id)
+        result = db.execute(sql, params)
+        new_project_id = result.lastrowid
+
+        session["project"] = new_project_id
+
+        return redirect("/project/milestone/new")
 
 
 
