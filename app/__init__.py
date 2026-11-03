@@ -280,15 +280,15 @@ def edit_project(id):
     with connect_db() as db:
 
         sql = """
-            INSERT INTO projects (name, desc)
-            VALUES (?, ?)
+            UPDATE projects
+            SET name = ?, desc = ?
             WHERE id = ?
         """
-        params = (name, desc, id)
+        params = (name, desc, id,)
         result = db.execute(sql, params)
 
         sql = """
-            SELECT id, 
+            SELECT id, status
             FROM milestones
             WHERE project_id = ?
         """
@@ -296,17 +296,22 @@ def edit_project(id):
         milestones = db.execute(sql, params).fetchall()
 
         for milestone in milestones:
-            status = request.form.get(f'name{milestone.id}' ) is not None
+            status = request.form.get(f'status{milestone["id"]}' ) is not None
+            print(f"{status}")
+            if status == True:
+                status = 1
+            else:
+                status = 0
 
             sql = """
-                INSERT INTO milestones (status)
-                VALUES (?)
+                UPDATE milestones
+                SET status = ?
                 WHERE id = ?
             """
-            params = (status, {milestone.id})
+            params = (status, milestone["id"],)
             result = db.execute(sql, params)
 
-        return redirect(f"/show/{project_id}")
+        return redirect(f"/show/{id}")
 
 
 
