@@ -276,20 +276,37 @@ def edit(id):
 def edit_project(id):
     name = request.form.get('name', '').strip()
     desc = request.form.get('desc', '').strip()
-    creator_id = session.get("user").get("id")
-
+    
     with connect_db() as db:
+
         sql = """
-            INSERT INTO projects (name, desc, creator_id)
-            VALUES (?, ?, ?)
+            INSERT INTO projects (name, desc)
+            VALUES (?, ?)
+            WHERE id = ?
         """
-        params = (name, desc, creator_id)
+        params = (name, desc, id)
         result = db.execute(sql, params)
-        new_project_id = result.lastrowid
 
-        session["project"] = new_project_id
+        sql = """
+            SELECT id, 
+            FROM milestones
+            WHERE project_id = ?
+        """
+        params = (id,)
+        milestones = db.execute(sql, params).fetchall()
 
-        return redirect("/project/milestone/new")
+        for milestone in milestones:
+            status = request.form.get(f'name{milestone.id}' ) is not None
+
+            sql = """
+                INSERT INTO milestones (status)
+                VALUES (?)
+                WHERE id = ?
+            """
+            params = (status, {milestone.id})
+            result = db.execute(sql, params)
+
+        return redirect(f"/show/{project_id}")
 
 
 
