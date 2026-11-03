@@ -31,6 +31,7 @@
   {% if session.logged_in %}
     {% if session.user.id == p_info.creator_id %}
       <a href="/edit/{{p_info.id}}">Update</a>
+      <a href="/delete/{{p_info.id}}">Delete</a>
     {% endif %}
   {% endif %}
 

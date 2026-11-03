@@ -313,6 +313,31 @@ def edit_project(id):
 
         return redirect(f"/show/{id}")
 
+#===========================================================
+# Delete Project
+#===========================================================
+@app.get("/delete/<int:id>")
+@login_required
+def delete_project(id):
+
+    with connect_db() as db:
+        sql = """
+            DELETE FROM projects
+            WHERE id = ?
+        """
+        params = (id,)
+        result = db.execute(sql, params)
+
+        sql = """
+            DELETE FROM milestones
+            WHERE project_id = ?
+        """
+        params = (id,)
+        result = db.execute(sql, params)
+
+        return redirect("/")
+
+
 
 
 #===========================================================

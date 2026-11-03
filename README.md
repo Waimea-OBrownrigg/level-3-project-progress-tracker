@@ -1,14 +1,13 @@
-# ... Project
+# Cool Project
 
 ## Project Description
 
-This is an app that ...
+This is an app that lets users create logs for projects that they can update as they make progress, these can then be shared with other users.
 
 The app has the following key features:
-- Feature one
-- Feature two
-- Feature three
-- ...
+- Accounts with projects attached to them.
+- Fully editable projects.
+- the ability to search for any project using it's ID.
 
 ## Live Site
 

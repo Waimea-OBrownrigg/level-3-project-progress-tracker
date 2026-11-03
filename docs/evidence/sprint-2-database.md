@@ -48,7 +48,7 @@ None required.
 
 You should be able to create a project with a name, description, and milestones, and you should then be able to search it's ID to view it.
 
-![Demonstration of the log in process.](screenshots/buggedprojectview.gif)
+![Demonstration of creating a project. (Bugged)](screenshots/buggedprojectview.gif)
 
 There seems to be something wrong with the status flag, this means that all of the milestones are shown as incomplete.
 
@@ -56,7 +56,7 @@ There seems to be something wrong with the status flag, this means that all of t
 
 The problem was, the values the checkbox where returning weren't compatible with a boolean, so I had to add a line to make it compatible, anyway, it works now!
 
-![Demonstration of the log in process.](screenshots/projectview.gif)
+![Demonstration of creating a project.](screenshots/projectview.gif)
 
 
 ## Sprint Review

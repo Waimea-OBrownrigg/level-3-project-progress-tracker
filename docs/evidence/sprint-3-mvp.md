@@ -14,51 +14,50 @@ Continue to develop the web application to the point that it provides all key fu
 - Develop SQL database queries to:
     - List projects created by you on the home page
     - Edit pre-existing data
+    - Delete an unneeded project
 
 
 ## Displaying projects you created
 
 When you're logged in, the system works fine, there are links to all the projects and they all operate as intended, the problem is when you're logged out, the site crashes.
 
-![Placeholder](screenshots/brokenhomepage.gif)
+![Demonstration of the "My projects" section of the homepage. (Bugged)](screenshots/brokenhomepage.gif)
 
 ### Changes / Improvements
 
 This happens because to get the projects that the user has created, the site tries to check if the user is logged in, but when the user is logged out, the variable that states this doesn't exist, resulting in the crash.
 
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE IMPROVED SYSTEM HERE**
+![Demonstration of the "My projects" section of the homepage.](screenshots/homewithlinks.gif)
 
 
-## Testing FEATURE NAME HERE
+## Editing a project
 
-Replace this text with notes about what you are testing, how you tested it, and the outcome of the testing
+The edit function as shown here works fine, but I forgot to put the pre-existing description for editing.
 
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE TESTING HERE**
-
-### Changes / Improvements
-
-Replace this text with notes any improvements you made as a result of the testing.
-
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE IMPROVED SYSTEM HERE**
-
-
-## Testing FEATURE NAME HERE
-
-Replace this text with notes about what you are testing, how you tested it, and the outcome of the testing
-
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE TESTING HERE**
+![Demonstration of editing a project. (Bugged)](screenshots/incompleteeditfunction.gif)
 
 ### Changes / Improvements
 
-Replace this text with notes any improvements you made as a result of the testing.
+This is how it should be.
 
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE IMPROVED SYSTEM HERE**
+![Demonstration of editing a project.](screenshots/finishededitfunction.gif)
 
 
-## ETC...
+## Deleting a project
+
+Unfortunately my delete function does not seem to be working at the moment.
+
+![Demonstration of deleting a project. (Bugged)](screenshots/deletedoesntwork.gif)
+
+### Changes / Improvements
+
+The problem was that I forgot to execute the sql after writing it, and also was missing a comma, but now that both of those are in place, my delete function works!
+
+![Demonstration of deleting a project.](screenshots/deleteworks.gif)
+
 
 
 ## Sprint Review
 
-Replace this text with a statement about how the sprint has moved the project forward - key success point, any things that didn't go so well, etc.
+Finishing this sprint means my website is now fully functional, and I've made the user experience as smooth as I've had time for.
 
