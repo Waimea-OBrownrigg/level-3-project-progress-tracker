@@ -2,5 +2,6 @@ title: Progress Tracker Project
 description: A system for customers to check in on their jobs
 author: Oliver Brownrigg
 
-development: true
-picotheme: azure
+development: false
+picotheme: amber 200
+

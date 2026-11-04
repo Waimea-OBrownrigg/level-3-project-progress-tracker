@@ -9,7 +9,7 @@
 
     <h2>Main page</h2>
 
-    <section id="searchbar">
+    <section id="content">
 
        <form method="post" action="/search">
     
@@ -21,16 +21,20 @@
             <button>Search</button>
         </form>
 
+    
+        {% if session.logged_in %}
+            <section class="link">
+                <a href="/project/new">New Project</a>
+            </section>
+            <p>My projects:</p>
+                <section class="link">
+                    {% for project in projects %}
+                        <li><a href="/show/{{project.id}}">{{project.name}}</a></li>
+                    {% endfor %}
+                </section>
+        {% endif %}
+
     </section>
-
-    {% if session.logged_in %}
-        <a href="/project/new">New Project</a>
-
-        <p>My projects:</p>
-        {% for project in projects %}
-            <a href="/show/{{project.id}}">{{project.name}}</a>
-        {% endfor %}
-    {% endif %}
 
 {% endblock %}
 
