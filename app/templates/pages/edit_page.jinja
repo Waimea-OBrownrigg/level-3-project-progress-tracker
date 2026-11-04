@@ -16,16 +16,21 @@
                     <input name="name" type="text" value="{{ p_info.name }}" required>
                 </label>
 
+                <br>
+
                 <label>
                     Description
                     <input name="desc" type="text" value="{{ p_info.desc }}">
                 </label>
+
+                <br>
 
                 {% for m_info in m_info %}
                     <label>
                         Milestone: {{ m_info.name }}
                         <input name="status{{m_info.id}}" type="checkbox" {{ 'checked' if m_info.status == 1 }}>
                     </label>
+                    <br>
                 {% endfor%}
 
                 <button>Submit</button>

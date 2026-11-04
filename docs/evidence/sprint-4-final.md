@@ -14,32 +14,28 @@ Develop the system until it is fully featured, with a refined UI and it satisfie
 - Perform final, full-system testing
 
 
-## Testing FEATURE NAME HERE
+## Adding colours
 
-Replace this text with notes about what you are testing, how you tested it, and the outcome of the testing
+To make my site more visually appealing I added a blue/grey colour palette.
 
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE TESTING HERE**
-
-![Placeholder](screenshots/placeholder.png)
+![Placeholder](screenshots/homepagecss1.png)
 
 ### Changes / Improvements
 
-Replace this text with notes any improvements you made as a result of the testing.
+A lot of the contrast was bad, and also the main text wasn't coloured, so I fixed that.
 
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE IMPROVED SYSTEM HERE**
+![Placeholder](screenshots/homepagecss1.5.png)
 
 
-## Testing FEATURE NAME HERE
+## Formatting
 
-Replace this text with notes about what you are testing, how you tested it, and the outcome of the testing
+To continue making my site more readable, I added padding and moved around different assets on my pages
 
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE TESTING HERE**
+![Placeholder](screenshots/homepagecss2.png)
 
 ### Changes / Improvements
 
-Replace this text with notes any improvements you made as a result of the testing.
-
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE IMPROVED SYSTEM HERE**
+None
 
 
 ## Testing FEATURE NAME HERE

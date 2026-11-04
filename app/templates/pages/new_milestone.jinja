@@ -8,22 +8,26 @@
 {% block content %}
 
     <h2>Define Milestones</h2>
+   
+    <section id="content">
 
-    Project: {{ project.name }}
-    Description: {{ project.desc }}
+        Project: {{ project.name }}
+        <br>
+        Description: {{ project.desc }}
 
-    <h3>Current Milestones</h3>
+        <h3>Current Milestones</h3>
 
-    <ul>
-        {% for milestone in milestones %}
-            {% if milestone.project_id == project_id %}
-                <li>{{ milestone.name }}</li>
-            {% endif %}
-        {% endfor%}
-    </ul>
+        <ul>
+            {% for milestone in milestones %}
+                {% if milestone.project_id == project_id %}
+                    <li>{{ milestone.name }}</li>
+                {% endif %}
+            {% endfor%}
+        </ul>
 
-    <h4>New Milestone</h4>
-    <section id="form">
+        <br>
+
+        <h4>New Milestone</h4>
 
         <form method="post" action="/addm">
 
@@ -32,16 +36,23 @@
                 <input name="name" type="text" required>
             </label>
 
+            <br>
+
             <label>
                 Complete
                 <input name="status" type="checkbox">
             </label>
 
+            <br>
+
             <button>Add</button>
+
+            <br>
         </form>
 
-         <button><a href="/show/{{project.id}}">Finish</a></button>
+        <button><a href="/show/{{project.id}}">Finish</a></button>
     </section>
+
 
 {% endblock %}
 

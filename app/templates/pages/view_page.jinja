@@ -9,31 +9,38 @@
 
   <h2>{{ p_info.name }}</h2>
 
-  <p>{{ p_info.desc }}</p>
+  <section id="content2">
+    <p>{{ p_info.desc }}</p>
 
-  <p>Progress:</p>
+    <br>
 
-  <ul>
-    {% for m_info in m_info %}
-      <li>
-        {{ m_info.name }}, 
-        {% if m_info.status == True %}
-          complete.
-        {% else %}
-          incomplete.
-        {% endif %}
-      </li>
-    {% endfor%}
-  </ul>
+    <p>Progress:</p>
 
-  <p>Project ID: {{ p_info.id }}</p>
+    <ul>
+      {% for m_info in m_info %}
+        <li>
+          {{ m_info.name }}, 
+          {% if m_info.status == True %}
+            complete.
+          {% else %}
+            incomplete.
+          {% endif %}
+        </li>
+      {% endfor%}
+    </ul>
 
-  {% if session.logged_in %}
-    {% if session.user.id == p_info.creator_id %}
-      <a href="/edit/{{p_info.id}}">Update</a>
-      <a href="/delete/{{p_info.id}}">Delete</a>
+    <br>
+
+    <p>Project ID: {{ p_info.id }}</p>
+
+    {% if session.logged_in %}
+      {% if session.user.id == p_info.creator_id %}
+        <a href="/edit/{{p_info.id}}">Update</a>
+        <br>
+        <a href="/delete/{{p_info.id}}">Delete</a>
+      {% endif %}
     {% endif %}
-  {% endif %}
+  </section>
 
 {% endblock %}
 
