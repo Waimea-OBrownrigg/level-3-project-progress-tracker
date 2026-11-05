@@ -144,6 +144,9 @@ def search():
 #===========================================================
 @app.get("/show/<int:id>")
 def show(id):
+
+    if (session.get("project")):
+        session.pop("project")
    
     with connect_db() as db:
         sql = """
@@ -172,6 +175,7 @@ def show(id):
 # Project creation Page
 #===========================================================
 @app.get("/project/new")
+@login_required
 def show_project_form():
     return render_template("pages/new_project.jinja")
 
@@ -203,26 +207,31 @@ def create_project():
 #===========================================================
 @app.get("/project/milestone/new")
 def show_milestone_form():
-    project_id = session["project"]
-    
-    with connect_db() as db:
-        sql = """
-            SELECT id, name, desc
-            FROM projects
-            WHERE id = ?
-        """
-        params = (project_id,)
-        project = db.execute(sql, params).fetchone()
+    if (session.get("project")):
+        project_id = session["project"]
+        
+        with connect_db() as db:
+            sql = """
+                SELECT id, name, desc
+                FROM projects
+                WHERE id = ?
+            """
+            params = (project_id,)
+            project = db.execute(sql, params).fetchone()
 
-        sql = """
-            SELECT name
-            FROM milestones
-            WHERE project_id = ?
-        """
-        params = (project_id,)
-        milestones = db.execute(sql, params).fetchall()
+            sql = """
+                SELECT name
+                FROM milestones
+                WHERE project_id = ?
+            """
+            params = (project_id,)
+            milestones = db.execute(sql, params).fetchall()
 
-    return render_template("pages/new_milestone.jinja", project=project, milestones=milestones)
+        return render_template("pages/new_milestone.jinja", project=project, milestones=milestones)
+
+    else:
+        flash(f"You need to create a project first.", "error")
+        return redirect("/project/new")
 
 #===========================================================
 # Add Milestone
@@ -247,11 +256,12 @@ def add_milestone():
 # Edit Project page
 #===========================================================
 @app.get("/edit/<int:id>")
+@login_required
 def edit(id):
    
     with connect_db() as db:
         sql = """
-            SELECT id, name, desc
+            SELECT id, name, desc, creator_id
             FROM projects
             WHERE id = ?
         """
@@ -266,7 +276,11 @@ def edit(id):
         params = (id,)
         milestones = db.execute(sql, params).fetchall()
 
-        return render_template("pages/edit_page.jinja", p_info = project, m_info = milestones)
+        if project["creator_id"] == session["user"]["id"]:
+            return render_template("pages/edit_page.jinja", p_info = project, m_info = milestones)
+        else:
+            flash(f"This account does not own that project", "error")
+            return redirect("/")
 
 #===========================================================
 # Edit Project
@@ -322,20 +336,35 @@ def delete_project(id):
 
     with connect_db() as db:
         sql = """
-            DELETE FROM projects
+            SELECT creator_id
+            FROM projects
             WHERE id = ?
         """
         params = (id,)
-        result = db.execute(sql, params)
+        project = db.execute(sql, params).fetchone()
 
-        sql = """
-            DELETE FROM milestones
-            WHERE project_id = ?
-        """
-        params = (id,)
-        result = db.execute(sql, params)
+        if project["creator_id"] == session["user"]["id"]:
+            sql = """
+                DELETE FROM projects
+                WHERE id = ?
+            """
+            params = (id,)
+            result = db.execute(sql, params)
 
-        return redirect("/")
+            sql = """
+                DELETE FROM milestones
+                WHERE project_id = ?
+            """
+            params = (id,)
+            result = db.execute(sql, params)
+
+        else:
+            flash(f"This account does not own that project", "error")
+            
+    return redirect("/")
+
+
+        
 
 
 

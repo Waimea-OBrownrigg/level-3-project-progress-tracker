@@ -30,7 +30,8 @@ class UserTable:
     SEED_DATA = """
         INSERT INTO users (username, pass_hash)
         VALUES
-            ("PlaceMcholder","1")
+            ("coolbusiness2","scrypt:32768:8:1$G61KmYsuYVxoJ8Ak$bc7a89e9c830bbf47731d86ee88aed5ae99aea023965f1f3a40ebf992f86d4665b8e890dfb1d3104afc146f59e13b3c8b5abbc205c35d6d131cc9f02d755be59"),
+            ("randomuser5","scrypt:32768:8:1$VuOwyp9tJKAWl8Ov$e0dcdc097d5ebb7f60cf004024d6fd8f5e7e4ff8213e11aa7e72be0c00bf918327f7e4ba9781ddab04e461bfb393be497d935daaa5da7881d8ae80247bb01b80")
     """
 
 class TrackerTable:

@@ -2,36 +2,32 @@
 
 ## Addressing Relevant Implications
 
-### NAME OF IMPLICATION 1
+### FUTURE PROOFING
 
-Replace this text with notes about what you did during the project to address the implication - design features, etc.
-
-
-### NAME OF IMPLICATION 2
-
-Replace this text with notes about what you did during the project to address the implication - design features, etc.
+Though I did not have enough time to make everything editable, I gave as many of the most important features the ability as I could, resulting in a fairly future proof website, for it to be complete I would have needed to add an edit option for accounts, but the website is mostly fine as is.
 
 
-### NAME OF IMPLICATION 3
+### PRIVACY
 
-Replace this text with notes about what you did during the project to address the implication - design features, etc.
-
-
-### NAME OF IMPLICATION 4
-
-Replace this text with notes about what you did during the project to address the implication - design features, etc.
+As the site is now, I have completely neglected this aspect, and there's a lot I would need add to get it working, at the moment there's no privacy options, the only feature that supports this implication is that you do need the ID of a project to find it specifically, otherwise though, if you search a random ID and there is a matching project you can view it without restrictions.
 
 
-### NAME OF IMPLICATION 5
+### AESTHETICS
 
-Replace this text with notes about what you did during the project to address the implication - design features, etc.
+While the aesthetics aren't customizable as I would have liked,I have given the website a minimalistic design and fairly generic  colour palette that should work across the board.
+
+
+### FUNCTIONALITY
+
+Unfortunately I did not have time to add any mobile friendly features, while it probably functions, it is very much intended for use with a widescreen device.
+
+
+### USABILITY
+
+I believe I did fairly well in this aspect, the site is laid out clearly, and isn't cluttered with features, and usage is fairly straightforward, th best feature I have in this regard, is that Users have extremely quick and easy access to their own projects on the home page, but I would have liked to add a feature to save other people's projects as well.
 
 
 ## Overall Review
 
-Replace these words with a brief review of how the project went in terms of:
-- What went well?
-- What didn't go so well?
-- How did the testing/trialling impact the final system?
-- What would you do differently if you could?
+Overall, I think there were a lot of missed opportunities in this project, if I hadn't got bogged down in the early stages I may not have been rushed in the later stages and be able to produce more features, but as it stands my project is in a usable state, with a couple extra quality of life features.
 

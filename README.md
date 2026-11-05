@@ -35,14 +35,13 @@ Project Evidence
 The following user accounts have been created to demonstrate the features of the system:
 
 Test User 1:
-- Username: xxxxx
-- Password: xxxxx
+- Username: coolbusiness2
+- Password: VeryNice1
 
 Test User 2:
-- Username: xxxxx
-- Password: xxxxx
+- Username: randomuser5
+- Password: HowTo3
 
-...
 
 
 ## Technologies Used

@@ -18,43 +18,56 @@ Develop the system until it is fully featured, with a refined UI and it satisfie
 
 To make my site more visually appealing I added a blue/grey colour palette.
 
-![Placeholder](screenshots/homepagecss1.png)
+![First coloured home page](screenshots/homepagecss1.png)
 
 ### Changes / Improvements
 
 A lot of the contrast was bad, and also the main text wasn't coloured, so I fixed that.
 
-![Placeholder](screenshots/homepagecss1.5.png)
+![Second coloured home page](screenshots/homepagecss1.5.png)
 
 
 ## Formatting
 
 To continue making my site more readable, I added padding and moved around different assets on my pages
 
-![Placeholder](screenshots/homepagecss2.png)
+![Image showcasing a fully formatted home page](screenshots/homepagecss2.png)
 
 ### Changes / Improvements
 
 None
 
 
-## Testing FEATURE NAME HERE
+## Testing unauthorized  access
 
-Replace this text with notes about what you are testing, how you tested it, and the outcome of the testing
+There are some pages on my website that should only be accessed when you are logged in to the right account, but at the moment you can bypass tis by typing the url of the page into the search bar, as shown in the GIF below.
 
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE TESTING HERE**
+![Logged out user accessing the edit page for a project](screenshots/securityissue.gif)
 
 ### Changes / Improvements
 
-Replace this text with notes any improvements you made as a result of the testing.
+Added functions to check if A: You're logged in. B: If applicable, your account owns the project you're trying to edit/delete. 
 
-**PLACE SCREENSHOTS AND/OR ANIMATED GIFS OF THE IMPROVED SYSTEM HERE**
+![Logged out user unable to access the edit page for a project](screenshots/unauthorizedaccess.gif)
+
+![Non owners unable to edit other people's project](screenshots/unauthorizedaccess2.gif)
 
 
-## ETC...
+## Testing entering add milestone page for a project that doesn't exist.
+
+The add milestone page is intended to come directly after the create project page, so when it doesn't it causes issues
+
+![Accessing the add milestone page directly causes a crash](screenshots/milestonecrash.gif)
+
+### Changes / Improvements
+
+I just needed to add a simple check and now it simply redirects to project creation.
+
+![Logged out user accessing the edit page for a project](screenshots/milestoneredirects.gif)
+
 
 
 ## Sprint Review
 
-Replace this text with a statement about how the sprint has moved the project forward - key success point, any things that didn't go so well, etc.
+With this sprint done my project is finally complete,my website now has css, and is as far as I can tell, bug free.
 
